@@ -36,9 +36,9 @@ Here's the big claim:
 
 ### Wait, what does that mean?
 
-Assume we knew that for some c < 1, max({rank(x), n-rank(x)}) ≤ cn. (This means x is **c-balanced**!)
+Assume we knew that for some c < 1, max({rank(x), n-rank(x)}) ≤ cn. (This means x is **c-balanced**—regardless of which way we go, we'll cut at least cn elements!)
 
-This means that the recurrance would evaluate out to be $T(n) = T(cn) + O(n)$. 
+Generally, this means that the recurrance could evaluate out to be $T(n) = T(cn) + O(n)$. 
 
 $cn + c^2n + c^3n + ... = \frac{n}{1-c} = O(n)$ (which is linear!)
 
@@ -65,5 +65,4 @@ $c (9/10 k) + c_1 k \leq ck$
 $10c_1 \leq c$
 
 With the base case, $T(1) \leq c$. Therefore, max($10c_1, T(1)$) ≤ c, so the function is indeed in O(1) time!
-
 
