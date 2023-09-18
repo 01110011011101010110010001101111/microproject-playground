@@ -66,3 +66,14 @@ $10c_1 \leq c$
 
 With the base case, $T(1) \leq c$. Therefore, max($10c_1, T(1)$) ≤ c, so the function is indeed in O(1) time!
 
+
+## Randomized Algorithms
+
+In the real world, there are often tradeoffs one must make. For example, we might trade accuracy for speed or worst-case runtime for average runtime. These tradeoffs are what makes randomized algorithms so useful. 
+
+There are two types of randomized algorithms: Monte Carlo and Las Vegas algorithms. Monte Carlo may not get the correct answer but will always have a good runtime. Las Vegas will always get the right answer but may have a very large runtime. 
+
+One example of a Monte Carlo algorithm that I've used for test cases is, for checking if a parametrixed circuit is correct by passing a few random test vectors instead of matrix multiplying with a variable. While I suppose this isn't the best of examples, if there was a parameter, it might be harder for the program to keep track of it. However, with setting the parameters to be random and sending in a few random test vectors, we can ensure the output is the same. This means that there can be incorrect matrices that we deem as correct; however, the runtime is better (I would imagine since just computation is easier than dealing with variables, though I don't know the exact comparison). Therefore, it's a Monte Carlo algorithm. 
+
+
+
