@@ -75,5 +75,7 @@ There are two types of randomized algorithms: Monte Carlo and Las Vegas algorith
 
 One example of a Monte Carlo algorithm that I've used for test cases is, for checking if a parametrixed circuit is correct by passing a few random test vectors instead of matrix multiplying with a variable. While I suppose this isn't the best of examples, if there was a parameter, it might be harder for the program to keep track of it. However, with setting the parameters to be random and sending in a few random test vectors, we can ensure the output is the same. This means that there can be incorrect matrices that we deem as correct; however, the runtime is better (I would imagine since just computation is easier than dealing with variables, though I don't know the exact comparison). Therefore, it's a Monte Carlo algorithm. 
 
+## Amortized Time—is it worst-case or average?
 
+Before the most recent lecture on amortized runtime, I wasn't completely certain if amortized time was worst-case or average. Turns out, it's both (sort of). The idea of amortized time is while a single operation can take a massive amount of time, we can guarantee that over k steps, this will only happen at most once. In this sense, yes, it's average since we're considering the runtime over several steps, but it's also worst case because the amortized runtime is the worst it can be over those steps. 
 
