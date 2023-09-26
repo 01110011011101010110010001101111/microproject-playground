@@ -79,3 +79,7 @@ One example of a Monte Carlo algorithm that I've used for test cases is, for che
 
 Before the most recent lecture on amortized runtime, I wasn't completely certain if amortized time was worst-case or average. Turns out, it's both (sort of). The idea of amortized time is while a single operation can take a massive amount of time, we can guarantee that over k steps, this will only happen at most once. In this sense, yes, it's average since we're considering the runtime over several steps, but it's also worst case because the amortized runtime is the worst it can be over those steps. 
 
+## Online vs. Offline Algorithms
+
+In the "real world," it's rare to have *all* the data before making a decision. Instead, a decision often has to be made based on what we've seen thus far and updated with the new data we get. This is what we would call an online algorithm. As opposed to an offline algorithm where there is a fixed input and a decision is made after reading that input, online algorithms gets pieces of the input at a time and must update its decision based on the new inputs. Note that once an online algorithm made a decision, it cannot be undone; instead, the algorithm just has to work from where its previous decision left it. 
+
