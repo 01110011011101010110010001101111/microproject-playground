@@ -6,6 +6,7 @@ plus = 1/2**0.5 * (zero + one)
 minus = 1/2**0.5 * (zero - one)
 
 from measurement import *
+from circuit import *
 def lec_4_example():
     """
     Example from lec 4 notes: https://math.mit.edu/~shor/435-LN/Lecture_04.pdf
@@ -24,7 +25,11 @@ def lec_4_example():
 def sample_circuit():
     circ = Circuit(2)
     print(circ.add_gate("h", 0))
-    print(circ.forward(np.array([1, 0, 1, 0])))
+    res = circ.forward(np.array([1, 0, 1, 0]))
+    # something is wrong, since the probability > 1
+    print(measure(res, np.eye(4)))
+
 
 if __name__ == "__main__":
     lec_4_example()
+    sample_circuit()
