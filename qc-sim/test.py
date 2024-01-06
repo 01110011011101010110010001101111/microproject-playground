@@ -21,5 +21,10 @@ def lec_4_example():
     state = np.array([5/10, 7/10, 5/10, 1/10])
     print(measure(state, pi_A))
 
+def sample_circuit():
+    circ = Circuit(2)
+    print(circ.add_gate("h", 0))
+    print(circ.forward(np.array([1, 0, 1, 0])))
+
 if __name__ == "__main__":
     lec_4_example()
