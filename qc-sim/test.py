@@ -7,6 +7,7 @@ minus = 1/2**0.5 * (zero - one)
 
 from measurement import *
 from circuit import *
+
 def lec_4_example():
     """
     Example from lec 4 notes: https://math.mit.edu/~shor/435-LN/Lecture_04.pdf
@@ -23,6 +24,13 @@ def lec_4_example():
     print(measure(state, pi_A))
 
 def sample_circuit():
+    # circuit 1
+    circ = Circuit(1)
+    circ.add_gate("h", 0)
+    res = circ.forward(np.array([1, 0]))
+    assert np.isclose(raw_probabilities(res, np.array([1, 0])), 0.5, 0.01)
+    assert np.isclose(raw_probabilities(res, np.array([0, 1])), 0.5, 0.01)
+    # circuit 2
     circ = Circuit(2)
     print(circ.add_gate("h", 0))
     res = circ.forward(np.array([1, 0, 1, 0]))
