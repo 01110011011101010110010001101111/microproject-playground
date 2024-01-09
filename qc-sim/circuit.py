@@ -2,7 +2,9 @@ import numpy as np
 
 gates = {
     "h": 1 / 2**0.5 * np.array([[1, 1], [1, -1]]),
-    "x": np.array([[0, 1], [1, 0]])
+    "x": np.array([[0, 1], [1, 0]]),
+    "z": np.array([[1, 0], [0, -1]]),
+    "y": np.array([[0, 0-1j], [0+1j, 0]]),
 }
 
 class Circuit:
